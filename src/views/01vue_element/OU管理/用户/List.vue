@@ -1,10 +1,7 @@
 <template>
   <section>
     <span>{{ title }}</span>
-    <el-table
-      :data="tableData"
-      max-height="600"
-    >
+    <el-table :data="tableData" max-height="600">
       <el-table-column fixed prop="Id" label="ID" />
       <!-- <el-table-column
         v-for="(item,index) of options"
@@ -14,7 +11,7 @@
         :sortable="item.sortable"
         :formatter="columnFormatter"
         width="150px"
-      /> -->
+      />-->
       <!-- <el-table-column
         :render-header="renderHeader"
         fixed="right"
@@ -22,7 +19,7 @@
         label="操作"
         width="120px"
       >
-      </el-table-column> -->
+      </el-table-column>-->
     </el-table>
   </section>
 </template>
@@ -44,6 +41,18 @@ export default {
         Password: "123451"
       }]
     };
+  },
+  mounted() {
+    this.$http.post("/api/user/save", {
+      username: "haha",
+      password: "sss"
+    }, {}).then((response) => {
+      console.log("response");
+      console.log(response);
+    }).catch(v => {
+      console.log("catch");
+      console.log(v);
+    });
   }
 };
 </script>
