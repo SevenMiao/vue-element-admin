@@ -1,5 +1,6 @@
 import Vue from "vue";
-
+import VueResource from "vue-resource";
+import VueRouter from "vue-router";
 import Cookies from "js-cookie";
 
 import "normalize.css/normalize.css"; // a modern alternative to CSS resets
@@ -27,7 +28,8 @@ import * as filters from "./filters"; // global filters
  * import { mockXHR } from '../mock'
  * mockXHR()
  */
-
+Vue.use(VueResource);
+Vue.use(VueRouter);
 Vue.use(Element, {
   size: Cookies.get("size") || "medium" // set element-ui default size
 });

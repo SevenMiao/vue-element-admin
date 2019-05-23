@@ -5,7 +5,7 @@ module.exports = {
     user: "root",
     password: "123456",
     port: "3306",
-    database: "order"
+    database: "vueelement"
   }
 };
 // var mysql = require('mysql')

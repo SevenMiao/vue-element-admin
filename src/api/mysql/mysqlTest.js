@@ -6,12 +6,12 @@ const conn = mysql.createConnection({
   user: "root",
   password: "123456",
   port: "3306",
-  database: "order"
+  database: "vueelement"
 });
 
 conn.connect();
 
-var sql = "select * from t_user";
+var sql = "select * from ou_user";
 conn.query(sql, function(err, result) {
   if (err) {
     console.log("select error - ", err.message);
