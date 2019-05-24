@@ -69,7 +69,7 @@ router.beforeEach(async(to, from, next) => {
     } else {
       console.log("has no token ; else");
       // other pages that do not have permission to access are redirected to the login page.
-      // next();
+      // next({ path: "/用户查询" });
       next(`/login?redirect=${to.path}`);
       NProgress.done();
     }
